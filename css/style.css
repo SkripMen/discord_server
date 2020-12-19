@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Comfortaa', cursive;
+}
+
+input[name="log"],
+input[name="reg"] {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: rgb(39, 39, 39);
+    display: flex;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.login {
+    position: absolute;
+    z-index: 2;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(39, 39, 39, 0.953);
+    transition: all .5s ease;
+}
+
+#log:checked~.login {
+    left: 0;
+}
+
+.nav {
+    background: rgba(39, 39, 39, 0.885);
+    display: flex;
+    height: 100px;
+}
+
+.logo {
+    margin: auto 25px;
+    transition: .2s linear;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo img {
+    float: left;
+    width: 200px;
+}
+
+.loginBut {
+    position: relative;
+    left: 65%;
+    transform: translateX(-50%);
+    margin: auto 50px;
+    padding: 10px;
+    background: #7289da;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.back {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    padding: 10px 25px;
+    background: #7289da;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.loginBut:hover,
+.back:hover {
+    background: #5969a3;
+}
+
+.welcom {
+    width: max-content;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcom p {
+    transition: .4s linear;
+    animation: open 1s linear 5s forwards;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+@keyframes open {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loginForm,
+.regForm {
+    width: 300px;
+    height: 350px;
+    background: rgb(39, 39, 39);
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0px 15px 1px black;
+    text-align: center;
+    color: #fff;
+    transition: .4s ease;
+}
+
+.regForm {
+    opacity: 0;
+}
+
+.loginForm h1,
+.regForm h1 {
+    padding: 25px;
+    color: #7289da;
+}
+
+.loginForm input,
+.regForm input {
+    width: 85%;
+    height: 25px;
+    font-size: 18px;
+    border: none;
+    padding: 5px;
+    margin: 10px;
+    color: #fff;
+    border-radius: 20px;
+    background: rgb(39, 39, 39);
+    box-shadow: 0 0 5px 1px black;
+}
+
+.loginForm a,
+.regForm a {
+    padding: 10px;
+    background: #7289da;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease;
+    position: relative;
+    top: 5%;
+    text-decoration: none;
+}
+
+.loginForm a:hover,
+.regForm a:hover {
+    background: #5969a3;
+}
+
+.loginForm p,
+.regForm p {
+    margin-top: 80px;
+    font-size: 14px;
+}
+
+.loginForm label,
+.regForm label {
+    cursor: pointer;
+    color: #7289da;
+}
+
+#reg:checked~.loginForm {
+    opacity: 0;
+}
+
+#reg:checked~.regForm {
+    opacity: 1;
+}
