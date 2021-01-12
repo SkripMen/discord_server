@@ -9,11 +9,6 @@ body {
     font-family: 'Comfortaa', cursive;
 }
 
-input[name="log"],
-input[name="reg"] {
-    display: none;
-}
-
 header {
     width: 100%;
     height: 100vh;
@@ -24,7 +19,7 @@ header {
 .main {
     width: 100%;
     height: 100vh;
-    background: url(../img/bg.jpg) no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.207), rgba(0, 0, 0, 0.727)), url(../img/bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -64,7 +59,7 @@ header {
 
 .loginBut {
     position: relative;
-    left: 65%;
+    left: 73%;
     transform: translateX(-50%);
     margin: auto 50px;
     padding: 10px;
@@ -73,23 +68,6 @@ header {
     color: #fff;
     cursor: pointer;
     transition: .3s ease;
-}
-
-.back {
-    position: absolute;
-    top: 5%;
-    left: 1%;
-    padding: 10px 25px;
-    background: #7289da;
-    border-radius: 25px;
-    color: #fff;
-    cursor: pointer;
-    transition: .3s ease;
-}
-
-.loginBut:hover,
-.back:hover {
-    background: #5969a3;
 }
 
 .welcom {
